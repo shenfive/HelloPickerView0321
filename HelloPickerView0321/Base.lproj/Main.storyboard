@@ -41,21 +41,41 @@
             </objects>
             <point key="canvasLocation" x="2010.4000000000001" y="98.50074962518741"/>
         </scene>
-        <!--View Controller-->
+        <!--Page2 View Controller-->
         <scene sceneID="gQ9-ba-nIl">
             <objects>
-                <viewController id="EBc-nL-7bh" sceneMemberID="viewController">
+                <viewController id="EBc-nL-7bh" customClass="Page2ViewController" customModule="HelloPickerView0321" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ed3-qZ-eWw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxb-KA-cLO">
+                                <rect key="frame" x="71" y="248" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Num-EZ-IEj">
+                                <rect key="frame" x="71" y="182" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="JIX-De-Anh"/>
                     </view>
                     <navigationItem key="navigationItem" id="4ot-HS-Ckx"/>
+                    <connections>
+                        <outlet property="label1" destination="Num-EZ-IEj" id="CxR-w9-2oq"/>
+                        <outlet property="label2" destination="Sxb-KA-cLO" id="Tjr-C5-PfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcS-82-sgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3205" y="-11"/>
+            <point key="canvasLocation" x="3204" y="-11.244377811094454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mLi-Wp-IE7">

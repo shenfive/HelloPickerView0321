@@ -26,6 +26,13 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextPage = segue.destination as? Page2ViewController{
+            nextPage.ast = astrological[selectedAst]
+            nextPage.bld = bloudType[selectedBld]
+        }
+    }
+    
     //MARK: Picker View Data Source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
@@ -43,6 +50,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
         return number
     }
+
     
     //MARK:UIPicerView Delegate
     //選擇之後的動作
