@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIPickerViewDataSource {
+class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 
-    
-    
     
     @IBOutlet weak var thePickerview: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         thePickerview.dataSource = self
+        thePickerview.delegate = self
     }
 
     
@@ -39,5 +38,11 @@ class ViewController: UIViewController,UIPickerViewDataSource {
         return number
     }
 
+    //MARK:UIPicerView Delegate
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("row:\(row)  component:\(component)")
+    }
+    
+    
 }
 
