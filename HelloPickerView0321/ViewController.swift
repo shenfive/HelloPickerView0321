@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
-
+    
     var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
     var bloudType = ["請選擇你的血型","A","B","O","AB"]
     var selectedAst = 0
     var selectedBld = 0
-
+    
     
     
     @IBOutlet weak var thePickerview: UIPickerView!
@@ -24,7 +24,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         thePickerview.dataSource = self
         thePickerview.delegate = self
     }
-
+    
     
     //MARK: Picker View Data Source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -43,7 +43,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
         return number
     }
-
+    
     //MARK:UIPicerView Delegate
     //選擇之後的動作
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -58,12 +58,10 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
         if selectedAst != 0 && selectedBld != 0{
             print("goNextPage")
+            performSegue(withIdentifier: "goToNext", sender: self)
         }else{
             print("還沒選完")
         }
-        
-        
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
