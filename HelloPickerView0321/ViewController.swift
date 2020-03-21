@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 
+    var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
+    var bloudType = ["請選擇你的血型","A","B","O","AB"]
+
+    
     
     @IBOutlet weak var thePickerview: UIPickerView!
     
@@ -29,9 +33,9 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         var number = 1
         switch component {
         case 0:
-            number = 5
+            number = astrological.count
         case 1:
-            number = 3
+            number = bloudType.count
         default:
             break
         }
@@ -43,7 +47,14 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         print("row:\(row)  component:\(component)")
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "第\(component) 的\(row)"
+        switch component {
+        case 0:
+            return astrological[row]
+        case 1:
+            return bloudType[row]
+        default:
+            return ""
+        }
     }
     
     
