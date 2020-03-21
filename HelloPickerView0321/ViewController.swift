@@ -12,6 +12,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
 
     var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
     var bloudType = ["請選擇你的血型","A","B","O","AB"]
+    var selectedAst = 0
+    var selectedBld = 0
 
     
     
@@ -43,9 +45,27 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
 
     //MARK:UIPicerView Delegate
+    //選擇之後的動作
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("row:\(row)  component:\(component)")
+        switch component {
+        case 0:
+            selectedAst = row
+        case 1:
+            selectedBld = row
+        default:
+            break
+        }
+        if selectedAst != 0 && selectedBld != 0{
+            print("goNextPage")
+        }else{
+            print("還沒選完")
+        }
+        
+        
+        
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
